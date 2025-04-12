@@ -1,3 +1,4 @@
+/* Body and general layout */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -50,22 +51,59 @@ footer {
   margin-top: 40px;
 }
 
-/* Theme Toggle */
+/* Theme Toggle button */
 #theme-toggle {
   background-color: #333;
   color: white;
   padding: 10px;
   border: none;
   cursor: pointer;
+  margin-top: 10px; /* Added margin for spacing */
+  font-size: 16px; /* Adjusted for better readability */
 }
+
+/* Hover effect */
 #theme-toggle:hover {
   background-color: #555;
 }
 
-a {
-  text-decoration: none;
-  color: #4CAF50;
+/* Media Queries for Responsiveness */
+
+/* For small screens like mobile phones */
+@media screen and (max-width: 600px) {
+  #theme-toggle {
+      width: 100%; /* Button takes full width */
+      font-size: 18px; /* Bigger font size for small screens */
+      padding: 15px; /* More padding for easier clicking */
+  }
+
+  nav ul {
+      display: block; /* Stack navigation links vertically */
+      text-align: center;
+  }
+
+  nav ul li {
+      margin-bottom: 10px; /* Add space between nav items */
+  }
+
+  header h1 {
+      font-size: 24px; /* Adjust header text size for smaller screens */
+  }
 }
-a:hover {
-  text-decoration: underline;
+
+/* For medium-sized screens (tablets) */
+@media screen and (max-width: 768px) {
+  #theme-toggle {
+      width: 80%; /* Button takes 80% of the width */
+      font-size: 17px; /* Adjust font size */
+  }
+
+  nav ul {
+      display: flex; /* Flex for horizontal alignment */
+      justify-content: center;
+  }
+
+  header h1 {
+      font-size: 30px; /* Larger font for medium screens */
+  }
 }
