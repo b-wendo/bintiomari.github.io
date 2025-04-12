@@ -1,63 +1,66 @@
-/* Reset some default browser styles */
-* {
+:root {
+    --bg-color: #ffffff;
+    --text-color: #111111;
+    --accent: #3f51b5;
+  }
+  
+  body.dark {
+    --bg-color: #111111;
+    --text-color: #ffffff;
+    --accent: #90caf9;
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-
-/* General Body */
-body {
-    font-family: Arial, sans-serif;
     line-height: 1.6;
-    background-color: #f4f4f4;
-    color: #333;
-}
-
-/* Header Styles */
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
+  }
+  
+  header, footer {
+    background-color: var(--accent);
+    color: white;
     text-align: center;
-}
-
-.navbar nav ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.navbar nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
-
-.navbar nav ul li a {
-    color: #fff;
+    padding: 1rem;
+  }
+  
+  header h1 {
+    margin: 0;
+  }
+  
+  main {
+    padding: 2rem;
+    max-width: 800px;
+    margin: auto;
+  }
+  
+  h2 {
+    color: var(--accent);
+  }
+  
+  ul {
+    padding-left: 1.2rem;
+  }
+  
+  a {
+    color: var(--accent);
     text-decoration: none;
-}
-
-/* Hero Section */
-.hero {
-    background-color: #007acc;
-    color: #fff;
-    padding: 60px 20px;
-    text-align: center;
-}
-
-.hero h2 {
-    font-size: 2.5em;
-}
-
-/* Section Styles */
-section {
-    padding: 40px 20px;
-    margin: 20px 0;
-}
-
-/* Footer Styles */
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-}
+  }
+  
+  button#theme-toggle {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: white;
+    color: var(--accent);
+    border: 2px solid var(--accent);
+    cursor: pointer;
+  }
+  
+  body.dark button#theme-toggle {
+    background-color: #222;
+    color: var(--accent);
+    border-color: var(--accent);
+  }
+  
